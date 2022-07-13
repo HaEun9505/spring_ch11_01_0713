@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/board")	//위에 선언하면 기본 url이 됨(/board/write.jsp)
 public class TestController {
 	
-	//value값과 일치하는 것을 찾아서 메소드 실행
+	//value값과 일치하는 것을 찾아서 메소드 실행(요청처리 메소드 제작)
 	@RequestMapping(value = "/write")
 	public String write(Model model) {	//model 객체를 파라미터로 받음
 		
