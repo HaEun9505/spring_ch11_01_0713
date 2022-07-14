@@ -1,4 +1,3 @@
-
 package com.haeun.test;
 
 import java.text.DateFormat;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * Handles requests for the application home page.
  */
-@Controller	//Controller¿¡¼­ (RequestMapping)¿äÃ»ÀÌ ¿À¸é Àâ¾ÆÁÜ
+@Controller	//Controllerì—ì„œ (RequestMapping)ìš”ì²­ì´ ì˜¤ë©´ ì¡ì•„ì¤Œ
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
@@ -23,7 +22,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	// value(°ª)¿Í ÀÏÄ¡ÇÏ´Â °ÍÀ» Ã£¾Æ¼­ ¸Ş¼Òµå ½ÇÇà
+	// value(ê°’)ì™€ ì¼ì¹˜í•˜ëŠ” ê²ƒì„ ì°¾ì•„ì„œ ë©”ì†Œë“œ ì‹¤í–‰
 	@RequestMapping(value = "/helloworld", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -33,10 +32,10 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		
-		//ÇöÀç½Ã°£À» serverTimeÀÌ¶ó´Â ÀÌ¸§À¸·Î model °´Ã¼¿¡ ½Ç¾î¼­ º¸¿©ÁÜ
+		//í˜„ì¬ì‹œê°„ì„ serverTimeì´ë¼ëŠ” ì´ë¦„ìœ¼ë¡œ model ê°ì²´ì— ì‹¤ì–´ì„œ ë³´ì—¬ì¤Œ
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "helloworld";	//viewÀÇ ÀÌ¸§ -> jsp ÆÄÀÏ ÀÌ¸§
+		return "helloworld";	//viewì˜ ì´ë¦„ -> jsp íŒŒì¼ ì´ë¦„
 	}
 	
 }

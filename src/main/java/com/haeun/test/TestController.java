@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/board")	//À§¿¡ ¼±¾ğÇÏ¸é ±âº» urlÀÌ µÊ(/board/write.jsp)
+@RequestMapping("/board")	//ìœ„ì— ì„ ì–¸í•˜ë©´ ê¸°ë³¸ urlì´ ë¨(/board/write.jsp)
 public class TestController {
 	
-	//value°ª°ú ÀÏÄ¡ÇÏ´Â °ÍÀ» Ã£¾Æ¼­ ¸Ş¼Òµå ½ÇÇà(¿äÃ»Ã³¸® ¸Ş¼Òµå Á¦ÀÛ)
+	//valueê°’ê³¼ ì¼ì¹˜í•˜ëŠ” ê²ƒì„ ì°¾ì•„ì„œ ë©”ì†Œë“œ ì‹¤í–‰(ìš”ì²­ì²˜ë¦¬ ë©”ì†Œë“œ ì œì‘)
 	@RequestMapping(value = "/write")
-	public String write(Model model) {	//model °´Ã¼¸¦ ÆÄ¶ó¹ÌÅÍ·Î ¹ŞÀ½
+	public String write(Model model) {	//model ê°ì²´ë¥¼ íŒŒë¼ë¯¸í„°ë¡œ ë°›ìŒ
 		
 		model.addAttribute("id", "tiger");	//name, value
 		return "write";
@@ -20,9 +20,9 @@ public class TestController {
 	@RequestMapping("/reply")
 	public ModelAndView reply() {
 		
-		ModelAndView mv = new ModelAndView();	//ModelAndView °´Ã¼ »ı¼ºs
-		mv.addObject("age", 30);				//Model °´Ã¼¿¡ µ¥ÀÌÅÍ¸¦ ´ãÀ½
-		mv.setViewName("board/reply");	//view ÀÌ¸§ ¼³Á¤
+		ModelAndView mv = new ModelAndView();	//ModelAndView ê°ì²´ ìƒì„±s
+		mv.addObject("age", 30);				//Model ê°ì²´ì— ë°ì´í„°ë¥¼ ë‹´ìŒ
+		mv.setViewName("board/reply");	//view ì´ë¦„ ì„¤ì •
 		
 		return mv;
 	}
